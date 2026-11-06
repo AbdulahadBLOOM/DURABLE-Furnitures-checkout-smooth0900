@@ -1,0 +1,180 @@
+/* Checkout / order-success / track-order pages – uses the site's theme variables */
+.co-wrap{padding:48px 0 80px}
+.co-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:26px 26px 22px;margin-bottom:22px}
+.co-card h4{font-family:var(--font-serif);font-size:1.15rem;margin:0 0 18px;color:var(--text);display:flex;align-items:center;gap:10px}
+.co-card h4 i{color:var(--gold)}
+.co-label{font-family:var(--font-sans);font-size:.74rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text-mid);margin-bottom:6px;display:block}
+.co-label em{color:#ef4444;font-style:normal}
+.co-input{width:100%;background:var(--stone);border:1.5px solid var(--border);color:var(--text);border-radius:10px;padding:12px 14px;font-family:var(--font-sans);font-size:.92rem;transition:border-color .2s,box-shadow .2s}
+.co-input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(249,115,22,.15)}
+.co-input.invalid{border-color:#ef4444}
+.co-err{color:#ef4444;font-size:.78rem;margin-top:5px;font-family:var(--font-sans)}
+.co-pay{display:flex;gap:12px;align-items:flex-start;border:1.5px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px;cursor:pointer;background:var(--stone);transition:all .2s}
+.co-pay:hover{border-color:var(--gold)}
+.co-pay.sel{border-color:var(--gold);background:rgba(249,115,22,.08)}
+.co-pay input{margin-top:4px;accent-color:#f97316}
+.co-pay b{display:block;color:var(--text);font-family:var(--font-sans);font-size:.92rem}
+.co-pay small{color:var(--text-faint);font-family:var(--font-sans);line-height:1.5;display:block;margin-top:3px}
+.co-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);align-items:center}
+.co-item:last-child{border-bottom:0}
+.co-thumb{width:64px;height:56px;border-radius:10px;overflow:hidden;background:var(--stone);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.4rem}
+.co-thumb img{width:100%;height:100%;object-fit:cover}
+.co-iname{font-family:var(--font-sans);font-weight:600;font-size:.9rem;color:var(--text);line-height:1.3}
+.co-imeta{font-size:.76rem;color:var(--text-faint);font-family:var(--font-sans)}
+.co-iprice{margin-left:auto;text-align:right;font-family:var(--font-sans);font-weight:600;color:var(--text);white-space:nowrap}
+.co-qty{display:inline-flex;align-items:center;gap:8px;margin-top:6px}
+.co-qty button{width:26px;height:26px;border-radius:7px;border:1px solid var(--border);background:var(--stone);color:var(--text);cursor:pointer;line-height:1}
+.co-qty button:hover{border-color:var(--gold);color:var(--gold)}
+.co-rm{background:none;border:0;color:var(--text-faint);font-size:.75rem;cursor:pointer;margin-left:8px}
+.co-rm:hover{color:#ef4444}
+.co-line{display:flex;justify-content:space-between;padding:7px 0;font-family:var(--font-sans);font-size:.9rem;color:var(--text-mid)}
+.co-line.total{border-top:1px dashed var(--border);margin-top:8px;padding-top:14px;font-size:1.15rem;font-weight:700;color:var(--text)}
+.co-submit{width:100%;margin-top:14px;background:var(--gold);color:#111;border:0;border-radius:12px;padding:16px;font-family:var(--font-sans);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.88rem;cursor:pointer;transition:all .2s}
+.co-submit:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 10px 28px rgba(249,115,22,.35)}
+.co-submit:disabled{opacity:.6;cursor:wait}
+.co-alert{border-radius:10px;padding:12px 14px;margin-bottom:16px;font-family:var(--font-sans);font-size:.88rem;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.35);color:#ef4444}
+.co-empty{text-align:center;padding:70px 20px;color:var(--text-mid);font-family:var(--font-sans)}
+.co-empty i{font-size:3rem;color:var(--border);display:block;margin-bottom:12px}
+.co-sticky{position:sticky;top:96px}
+.co-badge{display:inline-block;padding:4px 14px;border-radius:30px;font-size:.78rem;font-weight:700;text-transform:capitalize;font-family:var(--font-sans)}
+.st-pending{background:#78350f;color:#fde68a}.st-confirmed{background:#1e3a8a;color:#bfdbfe}.st-processing{background:#4c1d95;color:#ddd6fe}
+.st-shipped{background:#155e75;color:#a5f3fc}.st-delivered{background:#14532d;color:#bbf7d0}.st-cancelled{background:#7f1d1d;color:#fecaca}
+.st-unpaid{background:#7f1d1d;color:#fecaca}.st-paid{background:#14532d;color:#bbf7d0}.st-refunded{background:#44403c;color:#e7e5e4}
+.ok-hero{text-align:center;padding:10px 0 26px}
+.ok-check{width:78px;height:78px;border-radius:50%;background:rgba(16,185,129,.15);color:#10b981;font-size:2.4rem;display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px}
+.ok-no{font-family:var(--font-serif);font-size:1.5rem;color:var(--gold);letter-spacing:.04em}
+.kv-row{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px dashed var(--border);font-family:var(--font-sans);font-size:.9rem}
+.kv-row span:first-child{color:var(--text-faint)}.kv-row span:last-child{color:var(--text);text-align:right}
+.steps{display:flex;justify-content:space-between;margin:8px 0 6px;position:relative}
+.steps::before{content:"";position:absolute;top:15px;left:6%;right:6%;height:3px;background:var(--border);z-index:0}
+.step{text-align:center;flex:1;position:relative;z-index:1;font-family:var(--font-sans);font-size:.72rem;color:var(--text-faint);text-transform:capitalize}
+.step i{display:flex;width:32px;height:32px;margin:0 auto 6px;border-radius:50%;background:var(--stone);border:2px solid var(--border);align-items:center;justify-content:center;font-size:.85rem;font-style:normal}
+.step.done{color:var(--text)}.step.done i{background:var(--gold);border-color:var(--gold);color:#111}
+.tl-list{list-style:none;padding:0;margin:0}.tl-list li{border-left:2px solid var(--gold);padding:0 0 14px 14px;margin-left:6px;font-family:var(--font-sans);font-size:.86rem;color:var(--text)}
+.tl-list small{color:var(--text-faint);display:block}
+.co-wa{display:inline-flex;gap:8px;align-items:center;background:#25d366;color:#fff;border-radius:10px;padding:11px 20px;text-decoration:none;font-family:var(--font-sans);font-weight:600;font-size:.86rem}
+.co-btn{display:inline-flex;gap:8px;align-items:center;border:1.5px solid var(--border);color:var(--text);background:transparent;border-radius:10px;padding:11px 20px;text-decoration:none;font-family:var(--font-sans);font-weight:600;font-size:.86rem;cursor:pointer}
+.co-btn:hover{border-color:var(--gold);color:var(--gold)}
+@media print{
+  #pageLoader,#mainNav,.footer,.cart-sidebar,.cart-overlay,.custom-toast,.page-hero,.no-print,.whatsapp-float,.back-to-top{display:none!important}
+  body,.co-card{background:#fff!important;color:#000!important}.co-card{border:1px solid #ccc!important}
+  .co-card *,.kv-row span{color:#000!important}.co-wrap{padding:0}
+}
+@media(max-width:576px){.co-card{padding:20px 16px}.step{font-size:.62rem}}
+
+/* =====================================================================
+   CHECKOUT MOTION LAYER
+   One entrance sequence on load, then motion only in response to what
+   the person does: typing, picking, adding, removing, submitting.
+   ===================================================================== */
+:root{--co-ease:cubic-bezier(.22,1,.36,1);--co-spring:cubic-bezier(.34,1.56,.64,1)}
+
+/* ---- entrance: cards glide in one after another ---- */
+@keyframes coIn{from{opacity:0;transform:translateY(22px) scale(.985)}to{opacity:1;transform:none}}
+.co-wrap form>[class*="col-"]>.co-card,
+.co-wrap .co-sticky>.co-card{animation:coIn .75s var(--co-ease) both}
+.co-wrap form>.col-lg-7>#coAlert+.co-card{animation-delay:.10s}
+.co-wrap form>.col-lg-7>#coAlert+.co-card+.co-card{animation-delay:.22s}
+.co-wrap .co-sticky>.co-card{animation-delay:.16s}
+.co-card{transition:border-color .35s ease,box-shadow .35s ease,background .35s ease}
+.co-card:focus-within{border-color:var(--border-gold,rgba(249,115,22,.22));box-shadow:0 18px 50px -24px rgba(249,115,22,.28)}
+
+/* ---- fields ---- */
+.co-input{transition:border-color .25s var(--co-ease),box-shadow .25s var(--co-ease),background .25s ease,transform .25s var(--co-ease)}
+.co-input:hover:not(:focus){border-color:var(--text-faint)}
+.co-input:focus{background:var(--white);transform:translateY(-1px)}
+textarea.co-input{resize:vertical;min-height:76px}
+.co-label{transition:color .25s ease,transform .25s var(--co-ease)}
+.row>div:focus-within>.co-label{color:var(--gold);transform:translateX(2px)}
+
+/* validation: field shakes once, message slides in */
+@keyframes coShake{10%,90%{transform:translateX(-1px)}20%,80%{transform:translateX(3px)}30%,50%,70%{transform:translateX(-5px)}40%,60%{transform:translateX(5px)}}
+@keyframes coErrIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.co-input.invalid{animation:coShake .45s ease both;box-shadow:0 0 0 3px rgba(239,68,68,.14)}
+.co-err{min-height:0}
+.co-err:not(:empty){animation:coErrIn .3s var(--co-ease) both}
+
+/* alerts drop in */
+@keyframes coDrop{from{opacity:0;transform:translateY(-10px) scale(.98)}to{opacity:1;transform:none}}
+.co-alert:not(.d-none){animation:coDrop .4s var(--co-ease) both}
+
+/* ---- payment options ---- */
+.co-pay{position:relative;transition:border-color .25s ease,background .3s ease,transform .3s var(--co-ease),box-shadow .3s ease}
+.co-pay:hover{transform:translateX(3px)}
+.co-pay:active{transform:scale(.99)}
+.co-pay.sel{box-shadow:0 10px 30px -18px rgba(249,115,22,.55)}
+.co-pay small{transition:color .25s ease}
+.co-pay.sel small{color:var(--text-mid)}
+.co-pay input{appearance:none;-webkit-appearance:none;flex:0 0 auto;width:18px;height:18px;border-radius:50%;border:2px solid var(--text-faint);
+  background:transparent;margin-top:2px;cursor:pointer;
+  transition:border-color .25s ease,background .25s ease,box-shadow .35s var(--co-spring),transform .35s var(--co-spring)}
+.co-pay input:checked{border-color:var(--gold);background:var(--gold);box-shadow:inset 0 0 0 3px var(--stone),0 0 0 4px rgba(249,115,22,.18);transform:scale(1.08)}
+.co-pay.sel input:checked{box-shadow:inset 0 0 0 3px #1c130b,0 0 0 4px rgba(249,115,22,.18)}
+[data-theme="light"] .co-pay.sel input:checked{box-shadow:inset 0 0 0 3px #fff4ea,0 0 0 4px rgba(249,115,22,.18)}
+.co-pay input:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* loading skeleton for payment list */
+@keyframes coShimmer{to{background-position:-200% 0}}
+.co-skel{height:68px;border-radius:12px;margin-bottom:10px;background:linear-gradient(100deg,var(--stone) 30%,var(--stone-mid) 50%,var(--stone) 70%);background-size:200% 100%;animation:coShimmer 1.3s linear infinite}
+.co-pay.co-enter{animation:coIn .5s var(--co-ease) both;animation-delay:calc(var(--i,0)*70ms)}
+
+/* ---- order summary rows ---- */
+.co-item{transition:background .3s ease}
+.co-item.co-enter{animation:coIn .55s var(--co-ease) both;animation-delay:calc(var(--i,0)*80ms)}
+@keyframes coLeave{to{opacity:0;transform:translateX(30px);max-height:0;padding-top:0;padding-bottom:0;margin:0;border-color:transparent}}
+.co-item.co-leave{overflow:hidden;max-height:120px;animation:coLeave .3s ease-in forwards;pointer-events:none}
+.co-thumb{transition:transform .4s var(--co-ease)}
+.co-item:hover .co-thumb{transform:scale(1.06) rotate(-2deg)}
+.co-qty button{transition:border-color .2s,color .2s,background .2s,transform .2s var(--co-spring)}
+.co-qty button:hover{background:var(--gold-pale,rgba(249,115,22,.12))}
+.co-qty button:active{transform:scale(.82)}
+.co-qty b{display:inline-block;min-width:16px;text-align:center}
+.co-qty .co-rm{width:auto;height:auto;border:0;background:none;padding:3px 6px;display:inline-flex;align-items:center;gap:4px;color:var(--text-faint);border-radius:6px;margin-left:6px}
+.co-qty .co-rm:hover{color:#ef4444;background:rgba(239,68,68,.1)}
+.co-qty .co-rm i{transition:transform .25s var(--co-spring)}
+.co-qty .co-rm:hover i{transform:rotate(-12deg) scale(1.15)}
+@keyframes coBump{0%{transform:scale(1)}40%{transform:scale(1.45);color:var(--gold)}100%{transform:scale(1)}}
+.co-bump{animation:coBump .4s var(--co-spring)}
+@keyframes coPop{0%{transform:scale(1)}45%{transform:scale(1.07)}100%{transform:scale(1)}}
+.co-pop{display:inline-block;transform-origin:right center;animation:coPop .45s var(--co-spring)}
+.co-line span:last-child,.co-iprice{font-variant-numeric:tabular-nums}
+
+/* ---- coupon: fix white box + animate states ---- */
+.co-cp-row input.co-input{padding:11px 14px;text-transform:uppercase;letter-spacing:.06em}
+.co-cp-row input.co-input::placeholder{text-transform:none;letter-spacing:0;color:var(--text-faint)}
+.co-coupon .co-cp-row button{position:relative;overflow:hidden;transition:background .25s ease,color .25s ease,transform .2s var(--co-spring),opacity .2s}
+.co-coupon .co-cp-row button:active{transform:scale(.94)}
+.co-coupon .co-cp-row button:disabled{opacity:.7;cursor:wait}
+.co-coupon .co-cp-row button.busy::after{content:"";display:inline-block;width:12px;height:12px;margin-left:8px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;vertical-align:-1px;animation:coSpin .6s linear infinite}
+@keyframes coSpin{to{transform:rotate(360deg)}}
+.co-cp-row.co-shake{animation:coShake .45s ease}
+.co-cp-msg:not(.d-none){animation:coDrop .4s var(--co-ease) both}
+#coDiscRow:not(.d-none){animation:coDrop .45s var(--co-ease) both}
+#coDiscRow{overflow:hidden}
+
+/* ---- place order button ---- */
+.co-submit{position:relative;overflow:hidden;isolation:isolate;transition:transform .25s var(--co-ease),box-shadow .3s ease,background .35s ease,opacity .25s}
+.co-submit::before{content:"";position:absolute;inset:0;z-index:-1;transform:translateX(-120%) skewX(-20deg);
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.38),transparent);transition:transform .8s var(--co-ease)}
+.co-submit:hover:not(:disabled)::before{transform:translateX(120%) skewX(-20deg)}
+.co-submit:hover:not(:disabled){transform:translateY(-2px)}
+.co-submit:active:not(:disabled){transform:translateY(0) scale(.985);transition-duration:.1s}
+.co-submit i{display:inline-block;transition:transform .3s var(--co-spring)}
+.co-submit:hover:not(:disabled) i{transform:scale(1.2) rotate(-8deg)}
+.co-submit:disabled{opacity:.85}
+.co-submit.is-done{background:#10b981;color:#fff;opacity:1;cursor:default}
+.co-submit.is-done i{animation:coCheck .5s var(--co-spring) both}
+@keyframes coCheck{from{transform:scale(0) rotate(-90deg)}to{transform:none}}
+
+/* ---- empty cart ---- */
+.co-empty:not(.d-none){animation:coIn .6s var(--co-ease) both}
+.co-empty i{animation:coFloat 3.2s ease-in-out infinite}
+@keyframes coFloat{50%{transform:translateY(-8px)}}
+
+/* ---- order success tick ---- */
+.ok-check{animation:coCheck .7s var(--co-spring) both}
+
+/* ---- respect reduced motion ---- */
+@media (prefers-reduced-motion:reduce){
+  .co-wrap *,.co-wrap *::before,.co-wrap *::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important}
+}

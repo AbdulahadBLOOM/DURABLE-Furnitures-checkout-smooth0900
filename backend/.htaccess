@@ -1,0 +1,5 @@
+# Block direct access to internals (Apache). For Nginx see README.
+<FilesMatch "^(config|db|schema|session|panel_ui)\.(php|sql)$|\.(json|log|lock|sql)$">
+  Require all denied
+</FilesMatch>
+Options -Indexes

@@ -1,0 +1,52 @@
+{
+    "id": 5,
+    "order_number": "DF-261106-CJH4",
+    "access_token": "5c4afdd687d8310d7047a5b2d36a32d6",
+    "customer_id": null,
+    "request_key": "5ba8e5d2-e3b3-4345-b8fe-34002e86559e",
+    "status": "pending",
+    "payment_method": "cod",
+    "payment_status": "unpaid",
+    "customer_name": "AbdulahadBLOOM",
+    "phone": "03122902197",
+    "email": "ShadeHospital@gmail.com",
+    "address": "north nazimbad",
+    "area": "north karachi",
+    "city": "Karachi",
+    "postal_code": "72400",
+    "notes": "",
+    "admin_notes": "",
+    "subtotal": 1199,
+    "delivery_fee": 0,
+    "discount": 0,
+    "total": 1199,
+    "ip": "::1",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
+    "created_at": "2026-11-06 20:05:36",
+    "updated_at": "2026-11-06 20:05:36",
+    "tracking_no": "",
+    "courier": "",
+    "eta": null,
+    "cancel_reason": "",
+    "coupon_code": "",
+    "items": [
+        {
+            "brand": "Nilkamal",
+            "name": "Garden Armchair Set",
+            "image": "",
+            "unit_price": 1199,
+            "qty": 1,
+            "line_total": 1199
+        }
+    ],
+    "history": [
+        {
+            "status": "pending",
+            "note": "Order placed by customer",
+            "changed_by": "customer",
+            "created_at": "2026-11-06 20:05:36"
+        }
+    ],
+    "payment_label": "Cash on Delivery",
+    "payment_note": "Pay in cash when your furniture is delivered."
+}

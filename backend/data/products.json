@@ -1,0 +1,842 @@
+[
+ {
+  "brand": "Durian",
+  "name": "Café Round Dining Set",
+  "price": 28999,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Canopy King Bed",
+  "price": 33999,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Chesterfield 2-Seater",
+  "price": 31999,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Director Leather Chair",
+  "price": 14499,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Durian Power Recliner",
+  "price": 48999,
+  "image": "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=500&q=80"
+ },
+ {
+  "brand": "Durian",
+  "name": "Executive Office Desk",
+  "price": 26999,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Executive Study Desk",
+  "price": 41500,
+  "image": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=500&q=80"
+ },
+ {
+  "brand": "Durian",
+  "name": "Florentine TV Console",
+  "price": 12499,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Grand 8-Seater Dining",
+  "price": 42999,
+  "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80"
+ },
+ {
+  "brand": "Durian",
+  "name": "Grand Sectional Sofa",
+  "price": 69999,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Height-Adjust Standing Desk",
+  "price": 21499,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Heritage Bookcase",
+  "price": 5299,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Heritage Wardrobe",
+  "price": 115000,
+  "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&q=80"
+ },
+ {
+  "brand": "Durian",
+  "name": "Imperial 2-Seater",
+  "price": 30999,
+  "image": "https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=500&q=80"
+ },
+ {
+  "brand": "Durian",
+  "name": "Imperial 4-Door Wardrobe",
+  "price": 4699,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Imperial Dining Set",
+  "price": 58999,
+  "image": "https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?w=500&q=80"
+ },
+ {
+  "brand": "Durian",
+  "name": "Imperial Dressing Table",
+  "price": 31999,
+  "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=500&q=80"
+ },
+ {
+  "brand": "Durian",
+  "name": "Junior Bunk Bed",
+  "price": 13499,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Kitchen Island Counter",
+  "price": 33999,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Lazio Buffet Sideboard",
+  "price": 6299,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Luxe Bar Cabinet",
+  "price": 2299,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Luxe L-Shape Sofa",
+  "price": 35999,
+  "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80"
+ },
+ {
+  "brand": "Durian",
+  "name": "Luxe Marble Coffee Table",
+  "price": 22999,
+  "image": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=500&q=80"
+ },
+ {
+  "brand": "Durian",
+  "name": "Milano 3-Seater Sofa",
+  "price": 21299,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Parisian Accent Chair",
+  "price": 2399,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Power Recliner Sofa",
+  "price": 5299,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Prestige Queen Bed",
+  "price": 3899,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Royal 8-Seater Dining",
+  "price": 59999,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Royale Queen Bed",
+  "price": 69999,
+  "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&q=80"
+ },
+ {
+  "brand": "Durian",
+  "name": "Royale Queen Bed",
+  "price": 74500,
+  "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&q=80"
+ },
+ {
+  "brand": "Durian",
+  "name": "Sorrento Shoe Cabinet",
+  "price": 1599,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Twin Trundle Bed",
+  "price": 1199,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Velvet King Bed",
+  "price": 19499,
+  "image": ""
+ },
+ {
+  "brand": "Durian",
+  "name": "Velvet Recliner Sofa",
+  "price": 115000,
+  "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80"
+ },
+ {
+  "brand": "Durian",
+  "name": "Venetian Display Cabinet",
+  "price": 2399,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Boardroom Conference Table",
+  "price": 28999,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Carnival 3-Seater Sofa",
+  "price": 45000,
+  "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Classic 4-Seater Dining",
+  "price": 12999,
+  "image": "https://habitt.com/cdn/shop/files/a5.jpg?v=1738908319"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Classic Rocking Chair",
+  "price": 2899,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Comfort 2-Seater Sofa",
+  "price": 15499,
+  "image": "https://m.media-amazon.com/images/I/81jwxZKu-wL._AC_SL1500_.jpg"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Comfort 3+2 Sofa Set",
+  "price": 4699,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Comfort Divan Bed",
+  "price": 3599,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Compact Breakfast Bar",
+  "price": 4699,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Defender Steel Almirah",
+  "price": 3899,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "ErgoMax Office Chair",
+  "price": 7699,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Foldaway Futon Sofa Bed",
+  "price": 1599,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Forte 3-Door Wardrobe",
+  "price": 33999,
+  "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Grid Open Shelving Unit",
+  "price": 1199,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Harmony Loveseat",
+  "price": 5299,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Interio 2-Seater Loveseat",
+  "price": 11499,
+  "image": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=500&q=80"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Interio 5-Shelf Bookcase",
+  "price": 8499,
+  "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=500&q=80"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Interio Ergonomic Chair",
+  "price": 7499,
+  "image": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=500&q=80"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Interio Floating TV Unit",
+  "price": 12999,
+  "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Interio Sliding Wardrobe",
+  "price": 2899,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Interio Study Chair",
+  "price": 6999,
+  "image": "https://images.unsplash.com/photo-1541558869434-2840d308329a?w=500&q=80"
+ },
+ {
+  "brand": "Godrej",
+  "name": "KidZone 2-Door Wardrobe",
+  "price": 3599,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Magna 4-Seater Dining Set",
+  "price": 31500,
+  "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Murphy Wall Fold Bed",
+  "price": 17499,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Personal Locker Cabinet",
+  "price": 1899,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "SecureFile 4-Drawer Cabinet",
+  "price": 2599,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Serenity King Bed",
+  "price": 20999,
+  "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&q=80"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Slumber Single Bed",
+  "price": 7499,
+  "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&q=80"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Smart Wardrobe 4-Door",
+  "price": 3599,
+  "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&q=80"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Solid Oak Dining Table",
+  "price": 1599,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Space-Saver Folding Table",
+  "price": 2199,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Study Table with Bookshelf",
+  "price": 2399,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Urban Loft Single Bed",
+  "price": 1699,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "Visitor Stackable Chair",
+  "price": 749,
+  "image": ""
+ },
+ {
+  "brand": "Godrej",
+  "name": "WorkPro L-Shape Desk",
+  "price": 1699,
+  "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=500&q=80"
+ },
+ {
+  "brand": "Godrej",
+  "name": "Zen Platform Bed",
+  "price": 14499,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "6-Drawer Chest",
+  "price": 3899,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Adjustable Bar Stool Set",
+  "price": 1899,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Alto 3-Seater Sofa",
+  "price": 18999,
+  "image": "https://enzahome.pk/cdn/shop/files/1_6cf7ff15-c851-4bcc-a904-e50bdebe95b0.webp?v=1740996688&width=600"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Bloom Accent Chair",
+  "price": 8999,
+  "image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=500&q=80"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Boho Upholstered Bed",
+  "price": 2399,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Cosmo King Bed",
+  "price": 18999,
+  "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=500&q=80"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Cottage Panel Bed",
+  "price": 6799,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Elara 4-Door Wardrobe",
+  "price": 52000,
+  "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Entryway Console Table",
+  "price": 2399,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Entryway Console Table",
+  "price": 11499,
+  "image": "https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=500&q=80"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Executive Ergonomic Chair",
+  "price": 1599,
+  "image": "https://interwood.pk/cdn/shop/files/Core-Executive-Chair-_-High-Back_jpg.jpg?v=1773382371"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Floating Wall Shelf Set",
+  "price": 599,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Grid Bookshelf Unit",
+  "price": 7199,
+  "image": "https://www.interluebke.com/images/products/images/grid1.jpg"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Hammock Swing Chair",
+  "price": 1599,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Hampton 4-Seater Dining",
+  "price": 2299,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Junior 2-Door Wardrobe",
+  "price": 14999,
+  "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Kids Study Chair",
+  "price": 1099,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Kids Trundle Bed",
+  "price": 5299,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "L-Shape Corner Desk",
+  "price": 4699,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Luxe 3-Seater Sofa",
+  "price": 11999,
+  "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Manager Mid-Back Chair",
+  "price": 2899,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Mobile 3-Drawer Pedestal",
+  "price": 1399,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Modern 5-Shelf Bookcase",
+  "price": 1899,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Modular 5-Piece Sectional",
+  "price": 19499,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Nesting Side Tables",
+  "price": 1199,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Nordic 3-Seater Sofa",
+  "price": 2899,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Nordic 4-Seater Dining",
+  "price": 6799,
+  "image": "https://ak1.ostkcdn.com/images/products/is/images/direct/ed28739a2cf0b0d97ff178d361bdf82eefa98960/5-Piece-Dining-Set-Including-Blue-Velvet-High-Back-Nordic-Dining-Chair-%26-Creative-Design-MDF-Dining-Table.jpg"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Nordic L-Shape Sofa",
+  "price": 1999,
+  "image": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=500&q=80"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Relaxo Single Recliner",
+  "price": 1199,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Scandic 2-Door Wardrobe",
+  "price": 6299,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Serene Queen Bed",
+  "price": 990,
+  "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&q=80"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Studio Home Office Desk",
+  "price": 1399,
+  "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=500&q=80"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Urban 6-Seater Dining Set",
+  "price": 12499,
+  "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80"
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Veranda Daybed",
+  "price": 4299,
+  "image": ""
+ },
+ {
+  "brand": "HomeTown",
+  "name": "Vogue Bar Cabinet",
+  "price": 7699,
+  "image": "https://images.unsplash.com/photo-1565538810643-b5bdb134b47c?w=500&q=80"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "3-Tier Shoe Rack",
+  "price": 349,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "5-Drawer Storage Tower",
+  "price": 499,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Ace Single Bed",
+  "price": 899,
+  "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&q=80"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Aristo 3-Seater Sofa",
+  "price": 6999,
+  "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Baby Cot with Wheels",
+  "price": 1899,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Bliss L-Shape Sofa",
+  "price": 9499,
+  "image": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=500&q=80"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Café Bistro Chair Set",
+  "price": 749,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Chester Side Table",
+  "price": 2199,
+  "image": "https://images.unsplash.com/photo-1549187774-b4e9b0445b41?w=500&q=80"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Classic Diwan with Bolsters",
+  "price": 3899,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Comfort 3-Seater Sofa",
+  "price": 22499,
+  "image": "https://5.imimg.com/data5/SELLER/Default/2023/11/359377287/QJ/VO/ML/65897470/clufrox-3-seater-sofa-velvet-fabric-blue.jpg"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Compact 4-Seater Table",
+  "price": 999,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Diva Queen Storage Bed",
+  "price": 2399,
+  "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&q=80"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Easy Single Bed",
+  "price": 2599,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Freedom Bed with Mattress",
+  "price": 2299,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Freedom Shoe Rack",
+  "price": 1299,
+  "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&q=80"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Garden Armchair Set",
+  "price": 1199,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Heavy Duty Storage Box",
+  "price": 599,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "HomeDesk Computer Table",
+  "price": 1699,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Kiddo Single Bed",
+  "price": 7499,
+  "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=500&q=80"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Kitchen Serving Trolley",
+  "price": 799,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Mio 2-Door Wardrobe",
+  "price": 499,
+  "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Office Partition Screen",
+  "price": 2599,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Optima 3-Door Wardrobe",
+  "price": 4699,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Opus Study Table",
+  "price": 1699,
+  "image": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=500&q=80"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Outdoor Picnic Table Set",
+  "price": 1399,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Portable Laptop Table",
+  "price": 449,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Rio 4-Seater Dining Set",
+  "price": 1699,
+  "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Sheesham Wooden Bench",
+  "price": 2299,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "SlimLine 3-Door Wardrobe",
+  "price": 9499,
+  "image": "https://sanushaa.in/wp-content/uploads/2022/04/7.png"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Urban 6-Seater Dining",
+  "price": 3899,
+  "image": "https://krishnafurniture.com/cdn/shop/files/2SAK3458Velora2SeaterSofa_1.jpg?v=1773312026"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Urban Double Bed",
+  "price": 14299,
+  "image": "https://www.silaj.com/cdn/shop/files/10_Urban_Luxe_classsic_large.jpg?v=1763557465"
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Wooden Frame Sofa Set",
+  "price": 2399,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "WorkPro Task Chair",
+  "price": 1599,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "XXL Bean Bag Chair",
+  "price": 849,
+  "image": ""
+ },
+ {
+  "brand": "Nilkamal",
+  "name": "Zest Mesh Office Chair",
+  "price": 2999,
+  "image": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=500&q=80"
+ }
+]

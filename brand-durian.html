@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAIACsAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAnNJREFUeJx9k0uPVEUUx3+nqu6jbzMPkR5mTETI7DRmlIlRnAUbJJAQTYx8BhYuWPAt2Lkw0U9gYly50rgxJppJdEzGiLMBHQ1BGGBmoOnHvbfuOSy6p9Mwxlqdqpzzr6r/QyB588Lp+U9nivBObAwB4X+WgQUvdPtx/Ztf9z+W8290fmm3/OrmXz3NEnEAiIw6MQQ52GJqiEBZm66carveoNmQy2tLtnHriT54XDsvUDWG2gjDixBVqaORJo5W6sGMqjE6s4muLh9xIapZnjoXG+Xs6Q6X3j2O6ghkUDa0Us/9/ZJvf97hxnaXIguAkiXiopo5AVE18syzvrXH5s1HXHx7gbl2wudf/82X39/h9eVZPru2wgdrS/TLBnGCGQiM/ww4Ebr9yM5+Rb9seNSrubs75Kffd7n+xU2qWrny/iucXGwxrBSREddummHvhMQLTgTvhOCFF2YS7u2W/PtwyFw7YWV5lqpuGM8/CzCW6VAdG6OsFedgpkiwqaZDAPIfdfBCljhUoduvJ7cfAmjUqBtDzWjUiI2x161ZPJqxdCxnv1ezeesxaeInrwgHw2rGTBFYmE8pMs98O2HxaM5Lx3KufnSKNDg++epPtu8OyFOHjRHkwzOLtnV7wPa9AedWO1w6c9zUDFXoVw1F6tkZ++CPkQ+kisrCXMKrLxcEG5lWityzfmOXH357KKqGiODdiMCJEzOPmSFTbg/BiZTR4rDScKKT//jWay9+1+vXbe9FVUckOSfUjbpW7nsbW3vv/XN/uFZGi8FJeCZMReaGSZAnaofVAXCC1tGO9EvNJ2GajnMdTSb62XPTU2dJEDuI81N2qDgBLNSoPwAAAABJRU5ErkJggg==">
+  
+<script>
+/* ── THEME: anti-flash + toggle ── */
+(function(){
+  var t = localStorage.getItem("df-theme");
+  var theme = (t === "light" || t === "dark") ? t : "dark";
+  document.documentElement.setAttribute("data-theme", theme);
+  document.addEventListener("DOMContentLoaded", function(){
+    var btn = document.getElementById("themeToggleBtn");
+    if (!btn) return;
+    btn.addEventListener("click", function(){
+      var cur = document.documentElement.getAttribute("data-theme");
+      var next = cur === "light" ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("df-theme", next);
+      /* sync any open modal */
+      var mb = document.getElementById("pdModalBox");
+      if (mb) mb.setAttribute("data-theme", next);
+    });
+  });
+})();
+</script><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Durian – Durable Furnitures</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="luxury-upgrade.css" />
+
+<style>
+/* =====================================================
+   THEME TOGGLE BUTTON
+   ===================================================== */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.theme-toggle-track {
+  width: 48px;
+  height: 26px;
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  transition: background 0.3s, border-color 0.3s;
+  position: relative;
+}
+.theme-toggle-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: var(--ink);
+  transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), background 0.3s;
+  position: relative;
+}
+.theme-icon-dark,
+.theme-icon-light { position: absolute; transition: opacity 0.2s; }
+.theme-icon-light { opacity: 0; }
+.theme-icon-dark  { opacity: 1; }
+
+/* Light mode state of toggle */
+[data-theme="light"] .theme-toggle-thumb { transform: translateX(22px); }
+[data-theme="light"] .theme-toggle-track { background: rgba(196,147,63,0.2); border-color: var(--gold); }
+[data-theme="light"] .theme-icon-dark  { opacity: 0; }
+[data-theme="light"] .theme-icon-light { opacity: 1; }
+
+/* =====================================================
+   DARK MODE (default is already dark navbar)
+   LIGHT MODE OVERRIDES
+   ===================================================== */
+[data-theme="light"] {
+  --ink:        #0f0e0c;
+  --ink-soft:   #1c1a16;
+  --ink-muted:  #2e2b25;
+  --stone:      #faf8f4;
+  --stone-mid:  #f2ede4;
+  --white:      #ffffff;
+  --text:       #1a1814;
+  --text-mid:   #4a4438;
+  --text-faint: #7a7266;
+  --border:     #ddd7cc;
+  --border-gold: rgba(196,147,63,0.28);
+  --card-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* Light mode — body */
+[data-theme="light"] body {
+  background: #faf8f4;
+  color: #1a1814;
+}
+
+/* Light mode — navbar stays dark (premium look) */
+[data-theme="light"] #mainNav {
+  background: rgba(15,14,12,0.97);
+}
+
+/* Light mode — hero */
+[data-theme="light"] .hero-section { filter: brightness(1.03); }
+
+/* Light mode — brand logos strip */
+[data-theme="light"] .brand-logos-strip {
+  background: #fff;
+  border-color: #e5ddd0;
+}
+
+/* Light mode — section backgrounds */
+[data-theme="light"] .bg-light-custom { background: #f5f0e8 !important; }
+[data-theme="light"] .section-pad     { background: #fff; }
+
+/* Light mode — product cards */
+[data-theme="light"] .product-card {
+  background: #fff;
+  border: 1px solid #eee8dd;
+}
+
+/* Light mode — newsletter strip stays dark */
+[data-theme="light"] .newsletter-strip { /* keep dark */ }
+
+/* Light mode — filter pills in light mode */
+[data-theme="light"] .brand-filter-pill {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+[data-theme="light"] .filter-btn {
+  background: #fff;
+  border-color: #ddd7cc;
+  color: #5a5346;
+}
+[data-theme="light"] .filter-btn.active {
+  background: #1a1814;
+  border-color: #1a1814;
+  color: #fff;
+}
+
+/* Light mode — dropdown menus */
+[data-theme="light"] .dropdown-menu {
+  background: #fff;
+  border: 1px solid #e5ddd0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+[data-theme="light"] .dropdown-item { color: #886c2c; }
+[data-theme="light"] .dropdown-item:hover { background: #f5f0e8; }
+
+/* Light mode — stats bar */
+[data-theme="light"] #statsBar {
+  background: #fff;
+  border-bottom: 1px solid #e5ddd0;
+}
+
+/* Light mode — why section stays dark (intentional) */
+
+/* Light mode — back to top */
+[data-theme="light"] .back-to-top {
+  background: #fff;
+  border-color: rgba(196,147,63,0.4);
+}
+
+/* Light mode — footer always stays dark */
+[data-theme="light"] .footer { background: #0f0e0c !important; }
+
+/* Smooth transitions for theme switch */
+body, .product-card, .brand-logos-strip, .filter-btn, .brand-filter-pill,
+.dropdown-menu, #statsBar, section, .bg-light-custom, .footer {
+  transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* =====================================================
+   CAT FILTER BTN — SMOOTH HOVER & ACTIVE ANIMATIONS
+   ===================================================== */
+.cat-filter-btn {
+  position: relative;
+  overflow: hidden;
+  transition:
+    background 0.28s cubic-bezier(0.4,0,0.2,1),
+    color 0.28s cubic-bezier(0.4,0,0.2,1),
+    border-color 0.28s cubic-bezier(0.4,0,0.2,1),
+    box-shadow 0.28s cubic-bezier(0.4,0,0.2,1),
+    transform 0.22s cubic-bezier(0.34,1.56,0.64,1);
+}
+.cat-filter-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  border-radius: inherit;
+  transition: opacity 0.22s ease;
+  pointer-events: none;
+}
+.cat-filter-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+.cat-filter-btn:hover::after { opacity: 0.06; }
+.cat-filter-btn:active {
+  transform: translateY(0px) scale(0.96);
+  transition: transform 0.1s ease;
+}
+/* Ripple effect on click */
+.cat-filter-btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: catBtnRipple 0.55s linear;
+  background: rgba(255,255,255,0.25);
+  pointer-events: none;
+}
+@keyframes catBtnRipple {
+  to { transform: scale(4); opacity: 0; }
+}
+
+</style>
+<link rel="stylesheet" href="polish.css">
+</head>
+<body class="brand-durian-page">
+<div id="pageLoader">
+  <div class="loader-ring"></div>
+  <div class="loader-brand">Durable Furnitures</div>
+</div>
+
+
+<!-- ===== NAVBAR ===== -->
+<nav id="mainNav" class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 text-decoration-none" href="index.html">
+      <div class="logo-icon"><i class="bi bi-house-heart-fill"></i></div>
+      <div>
+        <div class="brand-name">DURABLE</div>
+        <div class="brand-sub">Furnitures</div>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="brands.html" role="button" data-bs-toggle="dropdown">Brands</a>
+          <ul class="dropdown-menu brand-dropdown">
+            <li>
+              <a class="dropdown-item brand-item" href="./brand-durian.html">
+                <span class="brand-icon-wrap durian-icon">
+                  <i class="bi bi-gem"></i>
+                </span>
+                <span class="brand-item-info">
+                  <span class="brand-item-name">Durian</span>
+                  <span class="brand-item-tag">Luxury Furniture</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item brand-item" href="./brand-godrej.html">
+                <span class="brand-icon-wrap godrej-icon">
+                  <i class="bi bi-shield-fill-check"></i>
+                </span>
+                <span class="brand-item-info">
+                  <span class="brand-item-name">Godrej</span>
+                  <span class="brand-item-tag">Trusted Since 1897</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item brand-item" href="./brand-nilkamal.html">
+                <span class="brand-icon-wrap nilkamal-icon">
+                  <i class="bi bi-boxes"></i>
+                </span>
+                <span class="brand-item-info">
+                  <span class="brand-item-name">Nilkamal</span>
+                  <span class="brand-item-tag">Value for Money</span>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item brand-item" href="./brand-hometown.html">
+                <span class="brand-icon-wrap hometown-icon">
+                  <i class="bi bi-house-heart-fill"></i>
+                </span>
+                <span class="brand-item-info">
+                  <span class="brand-item-name">HomeTown</span>
+                  <span class="brand-item-tag">Home Essentials</span>
+                </span>
+              </a>
+            </li>
+            <li><hr class="dropdown-divider my-1" /></li>
+            <li>
+              <a class="dropdown-item brand-item all-brands-item" href="brands.html">
+                <span class="brand-icon-wrap all-icon">
+                  <i class="bi bi-grid-3x3-gap-fill"></i>
+                </span>
+                <span class="brand-item-info">
+                  <span class="brand-item-name">All Brands</span>
+                  <span class="brand-item-tag">View complete catalog</span>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="compare.html">Compare</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="contact.html" role="button" data-bs-toggle="dropdown">Contact</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="faq.html"><i class="bi bi-patch-question-fill me-2" style="color:#f59e0b"></i>FAQ</a></li>
+            <li><a class="dropdown-item" href="location.html"><i class="bi bi-geo-alt-fill me-2" style="color:#ef4444"></i>Locations</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="contact.html"><i class="bi bi-envelope-fill me-2" style="color:#3b82f6"></i>Contact Us</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <div class="nav-search-wrap" id="navSearchWrap">
+            <button class="nav-search-btn" id="navSearchBtn" aria-label="Search">
+              <i class="bi bi-search"></i>
+            </button>
+            <div class="nav-search-expandable" id="navSearchExpandable">
+              <div style="position:relative;width:100%">
+                <input class="nav-search-input" id="navSearchInput" type="text" placeholder="Search products, brands…" autocomplete="off" />
+                <button class="nav-search-clear" id="navSearchClear"><i class="bi bi-x"></i></button>
+                <div class="search-loader" id="navSearchLoader"></div>
+              </div>
+            </div>
+            <div class="nav-search-results" id="navSearchResults"></div>
+          </div>
+        </li>
+                <li class="nav-item ms-1">
+          <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light mode" title="Toggle theme">
+            <span class="theme-toggle-track">
+              <span class="theme-toggle-thumb">
+                <i class="bi bi-moon-stars-fill theme-icon-dark"></i>
+                <i class="bi bi-sun-fill theme-icon-light"></i>
+              </span>
+            </span>
+          </button>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="track-order.html">Track Order</a></li>
+        <li class="nav-item ms-2">
+          <button class="nav-link cart-nav-btn border-0" id="cartBtn">
+            <i class="bi bi-bag"></i> Cart
+            <span class="cart-badge" id="cartBadge">0</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- BRAND HERO -->
+<div class="brand-hero-bar durian-bg text-white text-center">
+  <div class="container">
+    <nav aria-label="breadcrumb" class="mb-3" style="display:flex;justify-content:center;width:100%"><ol class="breadcrumb justify-content-center" style="--bs-breadcrumb-divider-color:rgba(255,255,255,0.4)" style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;margin:0 auto"><li class="breadcrumb-item" style="display:flex;align-items:center"><a href="index.html" style="color:rgba(255,255,255,0.7);text-decoration:none">Home</a></li><li class="breadcrumb-item" style="display:flex;align-items:center"><a href="brands.html" style="color:rgba(255,255,255,0.7);text-decoration:none">Brands</a></li><li class="breadcrumb-item active text-white" style="display:flex;align-items:center">Durian</li></ol></nav>
+    <div class="brand-logo-circle mx-auto mb-3" style="background:rgba(255,255,255,0.15);color:#fff;width:80px;height:80px;border-radius:12px;display:flex;align-items:center;justify-content:center"><i class="bi bi-gem" style="font-size:2rem;line-height:1;display:flex;align-items:center;justify-content:center"></i></div>
+    <h1 style="font-family:'Playfair Display',serif;font-size:3rem;font-weight:900">Durian Furniture</h1>
+    <p style="color:rgba(255,255,255,0.75);font-size:1rem;max-width:500px;margin:8px auto 0">Pakistan's #1 Premium Furniture Brand — Luxury crafted for discerning homes.</p>
+  </div>
+</div>
+
+<!-- BRAND INFO -->
+<section class="section-pad bg-light-custom">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6 reveal">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80" class="w-100 rounded-4" style="height:360px;object-fit:cover" alt="Durian" />
+      </div>
+      <div class="col-lg-6 reveal">
+        <p class="section-eyebrow" style="color:#e74c3c">About Durian</p>
+        <h2 class="section-title">Luxury at Its Finest</h2>
+        <p class="section-text">Durian is synonymous with luxury furniture across Pakistan and South Asia. Established in 1984, they specialize in high-end leather sofas, premium bedroom sets, and elegant living room collections crafted with imported materials.</p>
+        <p class="section-text">With exclusive showrooms across Pakistan and their signature craftsmanship, Durian stands for lasting elegance and uncompromised quality.</p>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <span class="feature-pill"><i class="bi bi-gem" style="color:#e74c3c"></i>Premium Leather</span>
+          <span class="feature-pill"><i class="bi bi-patch-check" style="color:#e74c3c"></i>10-Year Warranty</span>
+          <span class="feature-pill"><i class="bi bi-truck" style="color:#e74c3c"></i>Free Delivery</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DURIAN PRODUCTS -->
+<section class="section-pad">
+  <div class="container">
+    <div class="text-center mb-4">
+      <p class="section-eyebrow" style="color:#e74c3c">Durian Collection</p>
+      <h2 class="section-title">Durian Products</h2>
+    </div>
+    <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+      <button class="cat-filter-btn active" data-cat="all" onclick="filterCategory('all')"><i class="bi bi-grid-fill me-1"></i>All</button>
+      <button class="cat-filter-btn" data-cat="sofa" onclick="filterCategory('sofa')"><i class="bi bi-sofa me-1"></i>Sofas</button>
+      <button class="cat-filter-btn" data-cat="bed" onclick="filterCategory('bed')"><i class="bi bi-moon-stars me-1"></i>Bedroom</button>
+      <button class="cat-filter-btn" data-cat="dining" onclick="filterCategory('dining')"><i class="bi bi-cup-hot me-1"></i>Dining</button>
+      <button class="cat-filter-btn" data-cat="storage" onclick="filterCategory('storage')"><i class="bi bi-archive me-1"></i>Storage</button>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3 product-card-wrap reveal" data-brand="Durian" data-category="sofa">
+        <div class="product-card">
+          <div class="product-img-wrap" style="position:relative"><span class="position-absolute" style="position:absolute;top:8px;left:8px;background:#ef4444;color:#fff;font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:4px;z-index:2">SALE</span><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80" class="product-img" alt="" /><span class="brand-badge durian-badge">Durian</span></div>
+          <div class="product-body">
+            <h5 class="product-name">Luxe L-Shape Sofa</h5>
+            <p class="product-summary">Premium leather, 5-seater, mahogany frame</p>
+            <div class="d-flex align-items-center gap-1 mt-1 mb-1" style="font-size:0.78rem">
+              <i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-half" style="color:#f59e0b"></i>&nbsp;<span style="color:var(--text-muted)">4.8</span>
+              <span style="color:#888;font-size:0.75rem">(124)</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mt-3">
+              <div><span class="product-price">Rs.35,999</span><span class="product-original-price">Rs.43,999</span></div>
+              <div class="d-flex gap-2">
+                <button class="btn-icon" onclick="addToCompare('Durian','Luxe L-Shape Sofa','Rs.35,999','Leather','Sofa')" title="Compare"><i class="bi bi-bar-chart-line"></i></button>
+                <button class="btn-cart" onclick="addToCart('Durian','Luxe L-Shape Sofa','Rs.35,999','durian-badge','https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80')"><i class="bi bi-bag-plus me-1"></i>Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 product-card-wrap reveal" data-brand="Durian" data-category="sofa">
+        <div class="product-card">
+          <div class="product-img-wrap" style="position:relative"><span class="position-absolute" style="position:absolute;top:8px;left:8px;background:#ef4444;color:#fff;font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:4px;z-index:2">SALE</span><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=500&q=80" class="product-img" alt="" /><span class="brand-badge durian-badge">Durian</span></div>
+          <div class="product-body">
+            <h5 class="product-name">Imperial 2-Seater</h5>
+            <p class="product-summary">Italian leather, solid wood base, gold accents</p>
+            <div class="d-flex align-items-center gap-1 mt-1 mb-1" style="font-size:0.78rem">
+              <i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-half" style="color:#f59e0b"></i>&nbsp;<span style="color:var(--text-muted)">4.6</span>
+              <span style="color:#888;font-size:0.75rem">(89)</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mt-3">
+              <div><span class="product-price">Rs.30,999</span><span class="product-original-price">Rs.38,999</span></div>
+              <div class="d-flex gap-2">
+                <button class="btn-icon" onclick="addToCompare('Durian','Imperial 2-Seater','Rs.30,999','Italian Leather','Sofa')" title="Compare"><i class="bi bi-bar-chart-line"></i></button>
+                <button class="btn-cart" onclick="addToCart('Durian','Imperial 2-Seater','Rs.30,999','durian-badge','https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=500&q=80')"><i class="bi bi-bag-plus me-1"></i>Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 product-card-wrap reveal" data-brand="Durian" data-category="bed">
+        <div class="product-card">
+          <div class="product-img-wrap" style="position:relative"><span class="position-absolute" style="position:absolute;top:8px;left:8px;background:#22c55e;color:#fff;font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:4px;z-index:2">NEW</span><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&q=80" class="product-img" alt="" /><span class="brand-badge durian-badge">Durian</span></div>
+          <div class="product-body">
+            <h5 class="product-name">Royale Queen Bed</h5>
+            <p class="product-summary">Solid rosewood, tufted headboard, luxury finish</p>
+            <div class="d-flex align-items-center gap-1 mt-1 mb-1" style="font-size:0.78rem">
+              <i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-half" style="color:#f59e0b"></i>&nbsp;<span style="color:var(--text-muted)">4.9</span>
+              <span style="color:#888;font-size:0.75rem">(67)</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mt-3">
+              <div><span class="product-price">Rs.69,999</span><span class="product-original-price">Rs.82,000</span></div>
+              <div class="d-flex gap-2">
+                <button class="btn-icon" onclick="addToCompare('Durian','Royale Queen Bed','Rs.69,999','Rosewood','Bed')" title="Compare"><i class="bi bi-bar-chart-line"></i></button>
+                <button class="btn-cart" onclick="addToCart('Durian','Royale Queen Bed','Rs.69,999','durian-badge','https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&q=80')"><i class="bi bi-bag-plus me-1"></i>Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 product-card-wrap reveal" data-brand="Durian" data-category="storage">
+        <div class="product-card">
+          <div class="product-img-wrap"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&q=80" class="product-img" alt="" /><span class="brand-badge durian-badge">Durian</span></div>
+          <div class="product-body">
+            <h5 class="product-name">Heritage Wardrobe</h5>
+            <p class="product-summary">Solid teak, 6-door, hand-carved detailing</p>
+            <div class="d-flex align-items-center gap-1 mt-1 mb-1" style="font-size:0.78rem">
+              <i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-half" style="color:#f59e0b"></i>&nbsp;<span style="color:var(--text-muted)">4.7</span>
+              <span style="color:#888;font-size:0.75rem">(43)</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mt-3">
+              <div><span class="product-price">Rs.1,15,000</span><span class="product-original-price">Rs.1,40,000</span></div>
+              <div class="d-flex gap-2">
+                <button class="btn-icon" onclick="addToCompare('Durian','Heritage Wardrobe','Rs.1,15,000','Teak','Storage')" title="Compare"><i class="bi bi-bar-chart-line"></i></button>
+                <button class="btn-cart" onclick="addToCart('Durian','Heritage Wardrobe','Rs.1,15,000','durian-badge','https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&q=80')"><i class="bi bi-bag-plus me-1"></i>Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 product-card-wrap reveal" data-brand="Durian" data-category="dining">
+        <div class="product-card">
+          <div class="product-img-wrap"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80" class="product-img" alt="" /><span class="brand-badge durian-badge">Durian</span></div>
+          <div class="product-body">
+            <h5 class="product-name">Grand 8-Seater Dining</h5>
+            <p class="product-summary">Marble top, solid base, upholstered chairs</p>
+            <div class="d-flex align-items-center gap-1 mt-1 mb-1" style="font-size:0.78rem">
+              <i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-half" style="color:#f59e0b"></i>&nbsp;<span style="color:var(--text-muted)">4.5</span>
+              <span style="color:#888;font-size:0.75rem">(31)</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mt-3">
+              <div><span class="product-price">Rs.42,999</span><span class="product-original-price">Rs.52,999</span></div>
+              <div class="d-flex gap-2">
+                <button class="btn-icon" onclick="addToCompare('Durian','Grand 8-Seater Dining','Rs.42,999','Marble+Wood','Dining')" title="Compare"><i class="bi bi-bar-chart-line"></i></button>
+                <button class="btn-cart" onclick="addToCart('Durian','Grand 8-Seater Dining','Rs.42,999','durian-badge','https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=500&q=80')"><i class="bi bi-bag-plus me-1"></i>Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3 product-card-wrap reveal" data-brand="Durian" data-category="sofa">
+        <div class="product-card">
+          <div class="product-img-wrap"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80" class="product-img" alt="" /><span class="brand-badge durian-badge">Durian</span></div>
+          <div class="product-body">
+            <h5 class="product-name">Velvet Recliner Sofa</h5>
+            <p class="product-summary">3-seater, power recliner, velvet fabric</p>
+            <div class="d-flex align-items-center gap-1 mt-1 mb-1" style="font-size:0.78rem">
+              <i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-fill" style="color:#f59e0b"></i><i class="bi bi-star-half" style="color:#f59e0b"></i>&nbsp;<span style="color:var(--text-muted)">4.8</span>
+              <span style="color:#888;font-size:0.75rem">(55)</span>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mt-3">
+              <div><span class="product-price">Rs.1,15,000</span><span class="product-original-price">Rs.1,30,000</span></div>
+              <div class="d-flex gap-2">
+                <button class="btn-icon" onclick="addToCompare('Durian','Velvet Recliner Sofa','Rs.1,15,000','Velvet','Sofa')" title="Compare"><i class="bi bi-bar-chart-line"></i></button>
+                <button class="btn-cart" onclick="addToCart('Durian','Velvet Recliner Sofa','Rs.1,15,000','durian-badge','https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80')"><i class="bi bi-bag-plus me-1"></i>Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5 d-flex flex-wrap gap-3 justify-content-center">
+      <a href="compare.html" class="btn-primary-custom"><i class="bi bi-bar-chart-line me-2"></i>Compare Products</a>
+      <a href="brands.html" class="btn-outline-custom" style="color:var(--text-dark);border-color:var(--border)"><i class="bi bi-arrow-left me-2"></i>All Brands</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4"><div class="d-flex align-items-center gap-2 mb-3"><div class="logo-icon"><i class="bi bi-house-heart-fill"></i></div><div><div class="brand-name">DURABLE</div><div class="brand-sub">Furnitures</div></div></div><p class="footer-text">Premium furniture experience with trusted Pakistani brands. Making every home beautiful since 1999.</p></div>
+      <div class="col-6 col-lg-2"><p class="footer-heading">Pages</p><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="brands.html">All Brands</a></li><li><a href="compare.html">Compare</a></li><li><a href="faq.html">FAQ</a></li><li><a href="location.html">Locations</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="col-6 col-lg-2"><p class="footer-heading">Brands</p><ul class="footer-links"><li><a href="brand-durian.html">Durian</a></li><li><a href="brand-godrej.html">Godrej</a></li><li><a href="brand-nilkamal.html">Nilkamal</a></li><li><a href="brand-hometown.html">HomeTown</a></li></ul></div>
+      <div class="col-lg-4"><p class="footer-heading">Contact</p><p class="footer-text"><i class="bi bi-geo-alt me-2" style="color:var(--accent)"></i>14, Furniture Market, Karachi – 75600</p><p class="footer-text"><i class="bi bi-telephone me-2" style="color:var(--accent)"></i>+92 300 1234567</p><p class="footer-text"><i class="bi bi-envelope me-2" style="color:var(--accent)"></i>hello@durablefurnitures.com</p>
+        <a href="https://wa.me/923001234567" target="_blank" class="d-inline-flex align-items-center gap-2 mt-2" style="background:#25d366;color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:0.85rem;font-weight:600">
+          <i class="bi bi-whatsapp"></i> Order on WhatsApp
+        </a></div>
+    </div>
+    <hr class="footer-hr" /><div class="footer-bottom text-center">© 2026 Durable Furnitures. All rights reserved.</div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header"><h5><i class="bi bi-bag me-2"></i>Shopping Cart</h5><button class="cart-close" id="cartClose"><i class="bi bi-x-lg"></i></button></div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none"><div class="cart-total"><span class="cart-total-label">Total</span><span class="cart-total-amount" id="cartTotal">Rs.0</span></div><button class="btn-checkout" onclick="goCheckout()">Proceed to Checkout</button></div>
+</div>
+<div class="custom-toast" id="toast"><i class="bi bi-check-circle-fill me-2"></i><span id="toastMsg"></span></div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./app.js"></script>
+
+<script>
+
+/* ── NAVBAR SEARCH ── */
+(function(){
+  var searchData = [
+    // Pages
+    {name:'Home',          meta:'Page',            icon:'bi-house-fill',      color:'rgba(196,147,63,0.15)',  ctext:'var(--gold)',   href:'index.html'},
+    {name:'About Us',      meta:'Page',            icon:'bi-info-circle-fill',color:'rgba(196,147,63,0.15)',  ctext:'var(--gold)',   href:'about.html'},
+    {name:'Brands',        meta:'Page',            icon:'bi-grid-3x3-gap-fill',color:'rgba(196,147,63,0.15)', ctext:'var(--gold)',   href:'brands.html'},
+    {name:'Compare',       meta:'Page',            icon:'bi-bar-chart-line-fill',color:'rgba(196,147,63,0.15)',ctext:'var(--gold)',  href:'compare.html'},
+    {name:'FAQ',           meta:'Page',            icon:'bi-patch-question-fill',color:'rgba(255,193,7,0.15)',ctext:'#ffc107',      href:'faq.html'},
+    {name:'Locations',     meta:'Page',            icon:'bi-geo-alt-fill',    color:'rgba(239,68,68,0.15)',   ctext:'#ef4444',      href:'location.html'},
+    {name:'Contact Us',    meta:'Page',            icon:'bi-envelope-fill',   color:'rgba(59,130,246,0.15)',  ctext:'#60a5fa',      href:'contact.html'},
+    // Brands
+    {name:'Durian',        meta:'Luxury Furniture',icon:'bi-gem',             color:'rgba(196,57,43,0.18)',   ctext:'#e57263',      href:'brand-durian.html'},
+    {name:'Godrej',        meta:'Trusted Since 1897',icon:'bi-shield-fill-check',color:'rgba(16,185,129,0.15)',ctext:'#34d399',    href:'brand-godrej.html'},
+    {name:'Nilkamal',      meta:'Value for Money', icon:'bi-boxes',           color:'rgba(59,130,246,0.15)',  ctext:'#60a5fa',      href:'brand-nilkamal.html'},
+    {name:'HomeTown',      meta:'Home Essentials', icon:'bi-house-heart-fill',color:'rgba(139,92,246,0.15)', ctext:'#a78bfa',      href:'brand-hometown.html'},
+    // Products
+    {name:'L-Shape Sofa',  meta:'Durian · Rs.35,999',icon:'bi-gem',          color:'rgba(196,57,43,0.18)',   ctext:'#e57263',      href:'brand-durian.html'},
+    {name:'King Bed',      meta:'Godrej · Rs.20,999',icon:'bi-shield-fill-check',color:'rgba(16,185,129,0.15)',ctext:'#34d399',   href:'brand-godrej.html'},
+    {name:'Dining Table',  meta:'Nilkamal · Rs.3,899',icon:'bi-boxes',       color:'rgba(59,130,246,0.15)',  ctext:'#60a5fa',      href:'brand-nilkamal.html'},
+    {name:'Ergonomic Chair',meta:'HomeTown · Rs.1,599',icon:'bi-house-heart-fill',color:'rgba(139,92,246,0.15)',ctext:'#a78bfa', href:'brand-hometown.html'},
+    {name:'Wardrobe',      meta:'Godrej · Storage', icon:'bi-shield-fill-check',color:'rgba(16,185,129,0.15)',ctext:'#34d399',   href:'brand-godrej.html'},
+    {name:'Coffee Table',  meta:'Durian · Living Room',icon:'bi-gem',        color:'rgba(196,57,43,0.18)',   ctext:'#e57263',      href:'brand-durian.html'},
+    {name:'Bookshelf',     meta:'Nilkamal · Office',icon:'bi-boxes',         color:'rgba(59,130,246,0.15)',  ctext:'#60a5fa',      href:'brand-nilkamal.html'},
+    {name:'TV Unit',       meta:'HomeTown · Living', icon:'bi-house-heart-fill',color:'rgba(139,92,246,0.15)',ctext:'#a78bfa',    href:'brand-hometown.html'},
+  ];
+
+  function initSearch() {
+    var wrap    = document.getElementById('navSearchWrap');
+    var btn     = document.getElementById('navSearchBtn');
+    var expando = document.getElementById('navSearchExpandable');
+    var input   = document.getElementById('navSearchInput');
+    var clear   = document.getElementById('navSearchClear');
+    var results = document.getElementById('navSearchResults');
+    var loader  = document.getElementById('navSearchLoader');
+    if (!wrap) return;
+
+    var debounceTimer;
+
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var isOpen = expando.classList.contains('open');
+      if (isOpen) {
+        closeSearch();
+      } else {
+        openSearch();
+      }
+    });
+
+    function openSearch() {
+      expando.classList.add('open');
+      btn.querySelector('i').className = 'bi bi-x-lg';
+      setTimeout(function(){ input.focus(); }, 350);
+    }
+
+    function closeSearch() {
+      expando.classList.remove('open');
+      btn.querySelector('i').className = 'bi bi-search';
+      input.value = '';
+      clear.classList.remove('show');
+      results.classList.remove('show');
+      results.innerHTML = '';
+    }
+
+    input.addEventListener('input', function(){
+      var q = this.value.trim();
+      clear.classList.toggle('show', q.length > 0);
+      clearTimeout(debounceTimer);
+      if (q.length === 0) {
+        results.classList.remove('show');
+        results.innerHTML = '';
+        loader.classList.remove('show');
+        return;
+      }
+      loader.classList.add('show');
+      debounceTimer = setTimeout(function(){
+        loader.classList.remove('show');
+        showResults(q);
+      }, 280);
+    });
+
+    clear.addEventListener('click', function(){
+      input.value = '';
+      clear.classList.remove('show');
+      results.classList.remove('show');
+      results.innerHTML = '';
+      input.focus();
+    });
+
+    input.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') closeSearch();
+    });
+
+    document.addEventListener('click', function(e){
+      if (!wrap.contains(e.target)) closeSearch();
+    });
+
+    function showResults(q) {
+      var ql = q.toLowerCase();
+      var filtered = searchData.filter(function(d){
+        return d.name.toLowerCase().indexOf(ql) !== -1 ||
+               d.meta.toLowerCase().indexOf(ql) !== -1;
+      });
+      if (filtered.length === 0) {
+        results.innerHTML = '<div class="search-no-results"><i class="bi bi-search" style="display:block;font-size:1.4rem;margin-bottom:6px;opacity:0.3"></i>No results for "' + escHtml(q) + '"</div>';
+      } else {
+        results.innerHTML = filtered.slice(0, 7).map(function(d){
+          return '<a class="search-result-item" href="' + d.href + '">' +
+            '<span class="search-result-icon" style="background:' + d.color + ';color:' + d.ctext + '">' +
+              '<i class="bi ' + d.icon + '"></i>' +
+            '</span>' +
+            '<span>' +
+              '<span class="search-result-name">' + escHtml(d.name) + '</span>' +
+              '<span class="search-result-meta">' + escHtml(d.meta) + '</span>' +
+            '</span>' +
+          '</a>';
+        }).join('');
+      }
+      results.classList.add('show');
+    }
+
+    function escHtml(s) {
+      return s.replace(/[&<>"']/g, function(c){
+        return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+      });
+    }
+  }
+
+  // Page loader
+  function initPageLoader() {
+    var loader = document.getElementById('pageLoader');
+    if (!loader) return;
+    window.addEventListener('load', function(){
+      setTimeout(function(){ loader.classList.add('hidden'); }, 300);
+    });
+    // Fallback
+    setTimeout(function(){ if(loader) loader.classList.add('hidden'); }, 2000);
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    initSearch();
+    initPageLoader();
+  });
+})();
+
+</script>
+
+
+<script>
+/* ── CAT FILTER BTN RIPPLE ── */
+(function(){
+  document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('.cat-filter-btn, .cat-filter-btn-luxury').forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        var r = document.createElement('span');
+        r.classList.add('ripple');
+        var rect = btn.getBoundingClientRect();
+        var size = Math.max(rect.width, rect.height);
+        r.style.cssText = 'width:'+size+'px;height:'+size+'px;left:'+(e.clientX-rect.left-size/2)+'px;top:'+(e.clientY-rect.top-size/2)+'px;';
+        btn.appendChild(r);
+        r.addEventListener('animationend', function(){ r.remove(); });
+      });
+    });
+  });
+})();
+</script>
+<script src="auth-nav.js"></script>
+<script src="polish.js"></script>
+</body>
+</html>

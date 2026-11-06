@@ -1,0 +1,147 @@
+/* Copied from the site pages: theme toggle + light-mode overrides. */
+/* =====================================================
+   THEME TOGGLE BUTTON
+   ===================================================== */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.theme-toggle-track {
+  width: 48px;
+  height: 26px;
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid rgba(255,255,255,0.18);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  transition: background 0.3s, border-color 0.3s;
+  position: relative;
+}
+.theme-toggle-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: var(--ink);
+  transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1), background 0.3s;
+  position: relative;
+}
+.theme-icon-dark,
+.theme-icon-light { position: absolute; transition: opacity 0.2s; }
+.theme-icon-light { opacity: 0; }
+.theme-icon-dark  { opacity: 1; }
+
+/* Light mode state of toggle */
+[data-theme="light"] .theme-toggle-thumb { transform: translateX(22px); }
+[data-theme="light"] .theme-toggle-track { background: rgba(196,147,63,0.2); border-color: var(--gold); }
+[data-theme="light"] .theme-icon-dark  { opacity: 0; }
+[data-theme="light"] .theme-icon-light { opacity: 1; }
+
+/* =====================================================
+   DARK MODE (default is already dark navbar)
+   LIGHT MODE OVERRIDES
+   ===================================================== */
+[data-theme="light"] {
+  --ink:        #0f0e0c;
+  --ink-soft:   #1c1a16;
+  --ink-muted:  #2e2b25;
+  --stone:      #faf8f4;
+  --stone-mid:  #f2ede4;
+  --white:      #ffffff;
+  --text:       #1a1814;
+  --text-mid:   #4a4438;
+  --text-faint: #7a7266;
+  --border:     #ddd7cc;
+  --border-gold: rgba(196,147,63,0.28);
+  --card-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* Light mode — body */
+[data-theme="light"] body {
+  background: #faf8f4;
+  color: #1a1814;
+}
+
+/* Light mode — navbar stays dark (premium look) */
+[data-theme="light"] #mainNav {
+  background: rgba(15,14,12,0.97);
+}
+
+/* Light mode — hero */
+[data-theme="light"] .hero-section { filter: brightness(1.03); }
+
+/* Light mode — brand logos strip */
+[data-theme="light"] .brand-logos-strip {
+  background: #fff;
+  border-color: #e5ddd0;
+}
+
+/* Light mode — section backgrounds */
+[data-theme="light"] .bg-light-custom { background: #f5f0e8 !important; }
+[data-theme="light"] .section-pad     { background: #fff; }
+
+/* Light mode — product cards */
+[data-theme="light"] .product-card {
+  background: #fff;
+  border: 1px solid #eee8dd;
+}
+
+/* Light mode — newsletter strip stays dark */
+[data-theme="light"] .newsletter-strip { /* keep dark */ }
+
+/* Light mode — filter pills in light mode */
+[data-theme="light"] .brand-filter-pill {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+[data-theme="light"] .filter-btn {
+  background: #fff;
+  border-color: #ddd7cc;
+  color: #5a5346;
+}
+[data-theme="light"] .filter-btn.active {
+  background: #1a1814;
+  border-color: #1a1814;
+  color: #fff;
+}
+
+/* Light mode — dropdown menus */
+[data-theme="light"] .dropdown-menu {
+  background: #fff;
+  border: 1px solid #e5ddd0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+[data-theme="light"] .dropdown-item { color: #977934; }
+[data-theme="light"] .dropdown-item:hover { background: #f5f0e8; }
+
+/* Light mode — stats bar */
+[data-theme="light"] #statsBar {
+  background: #fff;
+  border-bottom: 1px solid #e5ddd0;
+}
+
+/* Light mode — why section stays dark (intentional) */
+
+/* Light mode — back to top */
+[data-theme="light"] .back-to-top {
+  background: #fff;
+  border-color: rgba(196,147,63,0.4);
+}
+
+/* Light mode — footer always stays dark */
+[data-theme="light"] .footer { background: #0f0e0c !important; }
+
+/* Smooth transitions for theme switch */
+body, .product-card, .brand-logos-strip, .filter-btn, .brand-filter-pill,
+.dropdown-menu, #statsBar, section, .bg-light-custom, .footer {
+  transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}

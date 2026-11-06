@@ -1,0 +1,83 @@
+/* =====================================================================
+   Durable Furnitures – site-wide polish layer
+   Additive only: nothing here replaces existing component styles.
+   Works with the site's variables (--gold, --stone, --border …) in light + dark.
+   Loaded by every storefront page, the account page and both panels.
+   ===================================================================== */
+
+/* ---------- global refinements ---------- */
+html{scroll-padding-top:90px}
+::selection{background:var(--gold,#c9943a);color:#17130c}
+:focus{outline:none}
+:focus-visible{outline:2px solid var(--gold,#c9943a);outline-offset:3px;border-radius:6px}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:none}
+img{-webkit-user-drag:none}
+body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+
+/* page fade-in / fade-out between pages (opacity only, so fixed elements are safe) */
+@keyframes plPageIn{from{opacity:0}to{opacity:1}}
+body{animation:plPageIn .5s ease both}
+html.pl-leaving body{opacity:0;transition:opacity .22s ease}
+
+/* ---------- scroll progress bar ---------- */
+#plProgress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:100001;pointer-events:none;
+  background:linear-gradient(90deg,var(--gold,#c9943a),var(--gold-light,#e0b96a));
+  transform-origin:0 50%;transform:scaleX(0);box-shadow:0 0 12px var(--gold-glow,rgba(201,148,58,.5))}
+
+/* ---------- reveal on scroll (safe: only hides when JS is running) ---------- */
+.pl-js .pl-reveal:not(.pl-in){opacity:0;transform:translateY(26px)}
+.pl-js .pl-reveal{transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);transition-delay:var(--pl-d,0s)}
+.pl-js .pl-reveal.pl-in{opacity:1;transform:none}
+.pl-js .pl-reveal.pl-left:not(.pl-in){transform:translateX(-34px)}
+.pl-js .pl-reveal.pl-right:not(.pl-in){transform:translateX(34px)}
+
+/* inner-page hero: staged entrance + slow drifting glow */
+@keyframes plRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.page-hero .container>*{animation:plRise .9s cubic-bezier(.22,1,.36,1) both}
+.page-hero .container>*:nth-child(1){animation-delay:.05s}
+.page-hero .container>*:nth-child(2){animation-delay:.15s}
+.page-hero .container>*:nth-child(3){animation-delay:.25s}
+.page-hero .container>*:nth-child(4){animation-delay:.35s}
+.page-hero{position:relative;overflow:hidden}
+.page-hero::after{content:"";position:absolute;width:560px;height:560px;right:-160px;top:-220px;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle,rgba(201,148,58,.20),transparent 62%);animation:plDrift 14s ease-in-out infinite alternate}
+.page-hero .container{position:relative;z-index:2}
+@keyframes plDrift{to{transform:translate(-90px,70px) scale(1.18)}}
+
+/* ---------- cursor spotlight on cards ---------- */
+.pl-glow{position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .35s ease;z-index:1;
+  background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(201,148,58,.16),transparent 55%)}
+.pl-spot:hover>.pl-glow{opacity:1}
+.pl-spot-rel{position:relative}
+
+/* ---------- button ripple + sheen ---------- */
+.pl-rip{position:relative;overflow:hidden}
+.pl-ripple{position:absolute;border-radius:50%;pointer-events:none;background:rgba(255,255,255,.45);transform:scale(0);animation:plRipple .65s ease-out forwards}
+@keyframes plRipple{to{transform:scale(1);opacity:0}}
+
+/* ---------- image loading: shimmer skeleton, soft fade-in, graceful failure ---------- */
+img[loading="lazy"]:not(.pl-loaded):not(.pl-fail){
+  background:linear-gradient(110deg,var(--stone-mid,#ede8de) 8%,var(--stone,#f7f2ea) 18%,var(--stone-mid,#ede8de) 33%);
+  background-size:220% 100%;animation:plShimmer 1.5s linear infinite}
+@keyframes plShimmer{to{background-position-x:-220%}}
+img.pl-loaded{animation:plImgIn .6s ease both}
+@keyframes plImgIn{from{opacity:0;filter:blur(8px)}to{opacity:1;filter:none}}
+img.pl-fail{opacity:.35;filter:grayscale(1)}
+
+/* ---------- back-to-top: nicer hover ---------- */
+.back-to-top{transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.back-to-top:hover{transform:translateY(-4px) scale(1.06)}
+
+/* ---------- custom scrollbar (thin, gold) ---------- */
+html{scrollbar-width:thin;scrollbar-color:var(--gold,#c9943a) transparent}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--gold,#c9943a);border-radius:10px;border:2px solid transparent;background-clip:padding-box}
+
+/* ---------- accessibility ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .pl-js .pl-reveal:not(.pl-in){opacity:1;transform:none}
+  #plProgress{display:none}
+}
+@media print{#plProgress,.pl-glow{display:none!important}}
